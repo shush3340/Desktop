@@ -7,34 +7,38 @@
     <meta name="author" content="">
     <link rel="icon" href="../../../../favicon.ico">
 
-    <title>דירת 5 חדרים להשכרה</title>
+    <title>5 חדרים מתאימה לשותפים</title>
     <script src="Scripts/jquery-3.6.1.min.js"></script>
     <script src="Content/bootstrap-rtl/bootstrap-rtl.js"></script>
     <link href="Content/bootstrap-rtl/brt.css" rel="stylesheet" />
     <link href="Styles/jimbotron.css" rel="stylesheet" />
-    <link href="Styles/StyleSheet.css" rel="stylesheet" />>
+    <link href="Styles/StyleSheet.css" rel="stylesheet" />
 
     <style>
         body {
             padding-top: 3.5rem;
         }
-
-        #cont1 li {
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: 500;
-            font-size: 18px;
-        }
-
-       
-
-       
-
-        
-
-       
     </style>
     <script type="text/javascript">
-     
+        $(function () {
+            //при нажатии на ссылку, содержащую Thumbnail
+            $('a.thumbnail').click(function (e) {
+                //отменить стандартное действие браузера
+                e.preventDefault();
+                //присвоить атрибуту scr элемента img модального окна
+                //значение атрибута scr изображения, которое обёрнуто
+                //вокруг элемента a, на который нажал пользователь
+                $('#image-modal .modal-body img').attr('src', $(this).find('img').attr('src'));
+                //открыть модальное окно
+                $("#image-modal").modal('show');
+            });
+            //при нажатию на изображение внутри модального окна 
+            //закрыть его (модальное окно)
+            $('#image-modal .modal-body img').on('click', function () {
+                $("#image-modal").modal('hide')
+            });
+        });
+
 
     </script>
 
@@ -45,14 +49,14 @@
 
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <!-- <a class="navbar-brand" href="#">Navbar</a>-->
-        <button class="navbar-toggler navbar-expand-sm" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">ראשי <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="index.html">ראשי<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="images.html">תמונות</a>
@@ -60,7 +64,7 @@
                 <!--<li class="nav-item">
                     <a class="nav-link" href="video.html">וידאו</a>
                 </li>-->
-                 <li class="nav-item">
+                <li class="nav-item">
                     <a class="nav-link" href="saf.html">תנאי סף</a>
                 </li>
                 <li class="nav-item">
@@ -73,31 +77,79 @@
 
     <main role="main">
 
-        <!-- Main jumbotron for a primary marketing message or call to action -->
         <div class="jumbotron">
             <div class="container">
-                <h3 class="display-3">בסביוני הכרמל</h3>
-                <h4>דירת 5 חדרים,מתאימה לארבעה שותפים .</h4>
-                <ol id="cont1">
-                    <li>יחידת הורים הכוללת חדר שינה ,מקלחת, שירותים וחדר ארונות מתאימה לזוג</li>
-                    <li>שני חדרים נוספים וממ"ד</li>
-                    <li>חדר אמבטיה ושירותים ושירותי אורחים</li>
-                    <li>סלון מרווח ופינת אוכל</li>
-                    <li>מטבח עם כיריים ומקרר</li>
-                    <li>מרפסת שירות ומרפסת שמש</li>
-                    <li>ארנונה ומים כלולים בשכ"ד</li>
-                    <li>חשמל וועד הבית כלולים בשכ"ד</li>
-                    <li>15 דקות הליכה מאוניברסיטה</li>
-                    <li>שכר דירה חודשי 10500 שקל</li>
-                </ol>
-
-            </div>
-        </div>
-        <div class="container">
-            <div class="col-sm-offset-3">
-                <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="//www.youtube.com/embed/zB4I68XVPzQ"></iframe>
+                <!-- Добавьте модальное окно после открывающего тега body-->
+                <div class="modal fade" id="image-modal" tabindex="-1" role="dialog">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                <div class="modal-title">xxxxx</div>
+                            </div>
+                            <div class="modal-body">
+                                <img class="img-responsive center-block" src="" alt="">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">סגור</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
+
+                <hr>
+                <div class="row">
+                    <div class="col-sm-6 col-md-6 col-lg-6">
+                        <img class="img-responsive img-thumbnail" img src="ImagesGeneral/living.jpg" />
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-6">
+                        <img class="img-responsive img-thumbnail" src="ImagesGeneral/bedroom2.jpg" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 col-md-6 col-lg-6">
+                        <img class="img-responsive img-thumbnail" src="ImagesGeneral/bedroom2_2.jpg" />
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-6 ">
+                        <img class="img-responsive img-thumbnail" src="ImagesGeneral/bath.jpg" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 col-md-6 col-lg-6">
+                        <img class="img-responsive img-thumbnail" src="ImagesGeneral/hallway.jpg" />
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-6 ">
+                        <img class="img-responsive img-thumbnail" src="ImagesGeneral/bedroom1.jpg" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 col-md-6 col-lg-6">
+                        <img class="img-responsive img-thumbnail" src="ImagesGeneral/kitch.jpg" />
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-6 ">
+                        <img class="img-responsive img-thumbnail" src="ImagesGeneral/kitch2.jpg" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 col-md-6 col-lg-6">
+                        <img class="img-responsive img-thumbnail" src="ImagesGeneral/outside.jpg" />
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-6 ">
+                        <img class="img-responsive img-thumbnail" src="ImagesGeneral/kitch2.jpg" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 col-md-6 col-lg-6">
+                        <img class="img-responsive img-thumbnail" src="ImagesGeneral/liv2.jpg" />
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-6 ">
+                        <img class="img-responsive img-thumbnail" src="ImagesGeneral/liv3.jpg" />
+                    </div>
+                </div>
+
+
+
             </div>
         </div>
         <div class="container">
@@ -109,24 +161,22 @@
                 </div>
                 <div class="col-md-3" style="text-align: center">
 
-                    <a class="btn btn-secondary" href="images.html" role="button">תמונות</a>
+                    <p><a class="btn btn-secondary" href="images.html" role="button">תמונות</a></p>
                 </div>
 
                 <div class="col-md-3" style="text-align: center">
 
-                    <a class="btn btn-secondary" href="saf.html" role="button">תנאי סף</a>
+                    <p><a class="btn btn-secondary" href="saf.html" role="button">תנאי סף</a></p>
                 </div>
                 <div class="col-md-3" style="text-align: center">
 
-                    <a class="btn btn-secondary" href="contacts.html" role="button">צור קשר</a>
+                    <p><a class="btn btn-secondary" href="contacts.html" role="button">צור קשר</a></p>
                 </div>
 
             </div>
 
             <hr>
         </div>
-        <!-- /container -->
-
 
     </main>
 
