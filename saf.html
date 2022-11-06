@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="he" dir="rtl">
 <head>
     <meta charset="utf-8">
@@ -18,17 +18,13 @@
         body {
             padding-top: 3.5rem;
         }
+        a .nav-link
+        {
+            color:#ff0000;
+        }
     </style>
     <script type="text/javascript">
-        $(document).ready(function () {
-
-            $('.sublink').click(function () {
-                var img = $(this);
-                var link = $(img).attr('data-link');
-                location.href = link;
-
-            });
-        });
+      
 
     </script>
 
@@ -46,14 +42,14 @@
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">דף הבית <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="index.html">ראשי <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="images.html">תמונות</a>
                 </li>
-                <li class="nav-item">
+                <!--<li class="nav-item">
                     <a class="nav-link" href="video.html">וידאו</a>
-                </li>
+                </li>-->
                 <li class="nav-item">
                     <a class="nav-link" href="saf.html">תנאי סף</a>
                 </li>
@@ -79,8 +75,8 @@
                         <span class="emph">בטחונות וערבים</span>
                         <ul>
                             <li class="lli">כל שותף יביא עימו שני ערבים מוכחים</li>
-                            <li class="lli">אשר יחתמו על שטר בטחון בסך 20000 שקל</li>
-                            <li class="lli">או מתן ערבות בנקאית בגובה 10000 שקל</li>
+                            <li class="lli">אשר יחתמו על שטר בטחון בסכום 20000 שקל</li>
+                            <li class="lli">או מתן ערבות בנקאית אישית בסכום 5000 שקל</li>
 
                         </ul>
                     </li>
@@ -102,32 +98,21 @@
             <!-- Example row of columns -->
             <div class="row" id="sublink">
                 <div class="col-md-3" style="text-align: center">
-                    <!--  <h2 class="clickable">תמונות</h2>-->
-                    <div class="cont-secondary">
-                        <img class="responsive img-fluid sublink" src="ImagesGeneral/oskarSh.jpg" data-link="images.html" />
-                    </div>
-                    <p><a class="btn btn-secondary" href="#" role="button">תמונות</a></p>
+
+                    <a class="btn btn-secondary" href="index.html" role="button">ראשי</a>
                 </div>
                 <div class="col-md-3" style="text-align: center">
-                    <!--<h2 class="clickable">וידאו</h2>-->
-                    <!--<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>-->
-                    <!--  <div class="embed-responsive embed-responsive-16by9">
-                  <iframe class="embed-responsive-item" src="Video/VID_20221105_131114.mp4"></iframe>
-              </div>-->
-                    <img class="responsive img-fluid sublink" src="ImagesGeneral/video.jpg" data-link="video.html" />
-                    <p><a class="btn btn-secondary" href="#" role="button">וידאו</a></p>
+
+                    <a class="btn btn-secondary" href="images.html" role="button">תמונות</a>
+                </div>
+
+                <div class="col-md-3" style="text-align: center">
+
+                    <a class="btn btn-secondary" href="saf.html" role="button">תנאי סף</a>
                 </div>
                 <div class="col-md-3" style="text-align: center">
-                    <img class="responsive img-fluid sublink" src="ImagesGeneral/tsaf.jpg" data-link="saf.html" />
-                    <!-- <h2 class="clickable">צור קשר</h2>-->
-                    <!-- <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>-->
-                    <p><a class="btn btn-secondary" href="#" role="button">תנאי סף</a></p>
-                </div>
-                <div class="col-md-3" style="text-align: center">
-                    <img class="responsive img-fluid sublink" src="ImagesGeneral/kesher.jpg" data-link="contacts.html" />
-                    <!-- <h2 class="clickable">צור קשר</h2>-->
-                    <!-- <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>-->
-                    <p><a class="btn btn-secondary" href="#" role="button">צור קשר</a></p>
+
+                    <a class="btn btn-secondary" href="contacts.html" role="button">צור קשר</a>
                 </div>
 
             </div>
