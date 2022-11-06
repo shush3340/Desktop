@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="he" dir="rtl">
 <head>
     <meta charset="utf-8">
@@ -20,15 +20,7 @@
         }
     </style>
     <script type="text/javascript">
-        $(document).ready(function () {
-
-            $('.sublink').click(function () {
-                var img = $(this);
-                var link = $(img).attr('data-link');
-                location.href =link;
-
-            });
-        });
+     
 
     </script>
 
@@ -51,9 +43,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="images.html">תמונות</a>
                 </li>
-                <li class="nav-item">
+                <!--<li class="nav-item">
                     <a class="nav-link" href="video.html">וידאו</a>
-                </li>
+                </li>-->
                 <li class="nav-item">
                     <a class="nav-link" href="saf.html">תנאי סף</a>
                 </li>
@@ -85,36 +77,30 @@
             </div>
 
             <!-- Example row of columns -->
-            <div class="row" id="sublink">
-                <div class="col-md-3" style="text-align: center">
-                    <!--  <h2 class="clickable">תמונות</h2>-->
-                    <div class="cont-secondary">
-                        <img class="responsive img-fluid sublink" src="ImagesGeneral/oskarSh.jpg" data-link="images.html" />
+            <div class="container">
+                <!-- Example row of columns -->
+                <div class="row" id="sublink">
+                    <div class="col-md-3" style="text-align: center">
+
+                        <a class="btn btn-secondary" href="index.html" role="button">ראשי</a>
                     </div>
-                    <p><a class="btn btn-secondary" href="images.html" role="button">תמונות</a></p>
-                </div>
-                <div class="col-md-3" style="text-align: center">
-                    <!--<h2 class="clickable">וידאו</h2>-->
-                    <!--<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>-->
-                    <!--  <div class="embed-responsive embed-responsive-16by9">
-                          <iframe class="embed-responsive-item" src="Video/VID_20221105_131114.mp4"></iframe>
-                      </div>-->
-                    <img class="responsive img-fluid sublink" src="ImagesGeneral/video.jpg" data-link="video.html" />
-                    <p><a class="btn btn-secondary" href="video.html" role="button">וידאו</a></p>
-                </div>
-                <div class="col-md-3" style="text-align: center">
-                    <img class="responsive img-fluid sublink" src="ImagesGeneral/tsaf.jpg" data-link="saf.html" />
-                    <!-- <h2 class="clickable">צור קשר</h2>-->
-                    <!-- <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>-->
-                    <p><a class="btn btn-secondary" href="saf.html" role="button">תנאי סף</a></p>
-                </div>
-                <div class="col-md-3" style="text-align: center">
-                    <img class="responsive img-fluid sublink" src="ImagesGeneral/kesher.jpg" data-link="contacts.html" />
-                    <!-- <h2 class="clickable">צור קשר</h2>-->
-                    <!-- <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>-->
-                    <p><a class="btn btn-secondary" href="contacts.html" role="button">צור קשר</a></p>
+                    <div class="col-md-3" style="text-align: center">
+
+                        <a class="btn btn-secondary" href="images.html" role="button">תמונות</a>
+                    </div>
+
+                    <div class="col-md-3" style="text-align: center">
+
+                        <a class="btn btn-secondary" href="saf.html" role="button">תנאי סף</a>
+                    </div>
+                    <div class="col-md-3" style="text-align: center">
+
+                        <a class="btn btn-secondary" href="contacts.html" role="button">צור קשר</a>
+                    </div>
+
                 </div>
 
+                <hr>
             </div>
 
             <hr>
